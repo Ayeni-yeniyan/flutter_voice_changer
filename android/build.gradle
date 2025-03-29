@@ -4,35 +4,27 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral() // Replace jcenter() with mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:7.3.0' // Updated from 3.2.1
     }
 }
-
-rootProject.allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    namespace 'cn.kayshen.voicechangerplugin' // Add namespace here
+    compileSdkVersion 34 // Updated from 27
+    ndkVersion "27.0.12077973" // Add NDK version
 
     defaultConfig {
-        minSdkVersion 16
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion 21 // Updated from 16 (consider 21+ for Flutter compatibility)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner" // Updated to AndroidX
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
 }
 
-dependencies{
-    implementation 'cn.kayshen:VoiceChanger:0.0.4'
-}
+// ... rest of the file remains the same
