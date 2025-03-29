@@ -1,11 +1,11 @@
 name: voice_changer_plugin
 description: Voice Changer With Six Type For Flutter
 version: 0.0.2
-author: kayshen <kayshen_xu@163.com>
+# author: kayshen <kayshen_xu@163.com>
 homepage: https://github.com/Kayshen-X/flutter_voice_changer
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ^3.0.0
 
 dependencies:
   flutter:
